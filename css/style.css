@@ -1,0 +1,56 @@
+/* css/style.css */
+
+/* Make the tall section visually distinct and tall enough to force scrolling */
+.tall-section-wrapper {
+  background-color: #f2f7f9; /* distinct background */
+  padding: 40px 0;
+}
+
+/* The inner menu section that uses the grid and spans full width (col-xs-12) */
+.menu-section {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 30px;
+  min-height: 1000px; /* ensures tall section for scrolling */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Mobile-only full-width dropdown menu styling */
+/* The collapse element is inside the navbar; make it full width and colored */
+.mobile-fullwidth-menu {
+  width: 100%;
+  background-color: #333; /* distinguish from content */
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu items style */
+.mobile-fullwidth-menu > li > a {
+  color: #fff;
+  padding: 15px 20px;
+  display: block;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Remove default navbar collapse padding on xs so it spans full width */
+@media (max-width: 767px) {
+  .navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-default {
+    margin-bottom: 0;
+  }
+}
+
+/* Ensure brand stays left and visible on all sizes */
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* Optional: make the menu items larger on mobile for easier tapping */
+@media (max-width: 767px) {
+  .mobile-fullwidth-menu > li > a {
+    font-size: 18px;
+  }
+}
